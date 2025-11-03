@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Projeto base para o trabalho de Teste de Mutação com StrykerJS.",
   "main": "src/operacoes.js",
+  "type": "module",
   "scripts": {
     "test": "jest",
     "coverage": "jest --coverage"

@@ -14,13 +14,17 @@ function raizQuadrada(n) {
   return Math.sqrt(n);
 }
 function restoDivisao(dividendo, divisor) { return dividendo % divisor; }
+
+// Versão final refatorada do Fatorial (remove 'if' redundante)
 function fatorial(n) {
   if (n < 0) throw new Error('Fatorial não é definido para números negativos.');
-  if (n === 0 || n === 1) return 1;
   let resultado = 1;
-  for (let i = 2; i <= n; i++) { resultado *= i; }
+  for (let i = 2; i <= n; i++) {
+    resultado *= i;
+  }
   return resultado;
 }
+
 function mediaArray(numeros) {
   if (numeros.length === 0) return 0;
   return somaArray(numeros) / numeros.length;
@@ -31,11 +35,13 @@ function somaArray(numeros) {
 
 // === Bloco 2: Operações em Arrays e Checagens (11-20) ===
 function maximoArray(numeros) {
-  if (numeros.length === 0) throw new Error('Array vazio не possui valor máximo.');
+  // CORRIGIDO: "не" -> "não"
+  if (numeros.length === 0) throw new Error('Array vazio não possui valor máximo.');
   return Math.max(...numeros);
 }
 function minimoArray(numeros) {
-  if (numeros.length === 0) throw new Error('Array vazio не possui valor mínimo.');
+  // CORRIGIDO: "не" -> "não"
+  if (numeros.length === 0) throw new Error('Array vazio não possui valor mínimo.');
   return Math.min(...numeros);
 }
 function valorAbsoluto(n) { return Math.abs(n); }
@@ -80,10 +86,12 @@ function fibonacci(n) { // Retorna o n-ésimo termo
   if (n <= 1) return n;
   return fibonacci(n - 1) + fibonacci(n - 2);
 }
+
+// Versão final refatorada do produtoArray (remove 'if' redundante)
 function produtoArray(numeros) {
-  if (numeros.length === 0) return 1;
   return numeros.reduce((acc, val) => acc * val, 1);
 }
+
 function clamp(valor, min, max) {
   if (valor < min) return min;
   if (valor > max) return max;
@@ -105,7 +113,8 @@ function isMaiorQue(a, b) { return a > b; }
 function isMenorQue(a, b) { return a < b; }
 function isEqual(a, b) { return a === b; }
 function medianaArray(numeros) {
-  if (numeros.length === 0) throw new Error('Array vazio не possui mediana.');
+  // CORRIGIDO: "не" -> "não"
+  if (numeros.length === 0) throw new Error('Array vazio não possui mediana.');
   const sorted = [...numeros].sort((a, b) => a - b);
   const mid = Math.floor(sorted.length / 2);
   if (sorted.length % 2 === 0) {

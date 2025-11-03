@@ -1,3 +1,4 @@
+// @ts-nocheck
 const {
   soma, subtracao, multiplicacao, divisao, potencia, raizQuadrada, restoDivisao,
   fatorial, mediaArray, somaArray, maximoArray, minimoArray, valorAbsoluto,
